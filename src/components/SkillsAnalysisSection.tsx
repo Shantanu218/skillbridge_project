@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 const SkillsAnalysisSection = () => {
     // Sample skill data
     const skillsData = [
-        { skill: "HTML", current: 70, target: 100, courses: 1 },
-        { skill: "CSS", current: 55, target: 100, courses: 5 },
-        { skill: "JavaScript", current: 40, target: 100, courses: 8 },
-        { skill: "Communication", current: 85, target: 100, courses: 4 },
+        { skill: "HTML", current: 70, target: 100, courses: 1, message: "Top 20%" },
+        { skill: "CSS", current: 55, target: 100, courses: 5, message: "Top 45%" },
+        { skill: "JavaScript", current: 40, target: 100, courses: 8, message: "Top 60%" },
+        { skill: "Communication", current: 85, target: 100, courses: 4, message: "Top 10%" },
     ];
 
     return (
@@ -18,9 +18,9 @@ const SkillsAnalysisSection = () => {
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6">
                     <div>
-                        <h2 className="text-3xl font-bold tracking-tight mb-2">Smart Skill Gap Analysis</h2>
+                        <h2 className="text-3xl font-bold tracking-tight mb-2">Skill Gap Analysis</h2>
                         <p className="text-muted-foreground max-w-2xl">
-                            Identify the skills you need to develop to reach your career goals and get personalized learning recommendations.
+                        Identify the skills you need to develop to reach your career goals and get personalized learning recommendations.
                         </p>
                     </div>
                     <Button asChild variant="outline" className="shrink-0">
@@ -46,7 +46,7 @@ const SkillsAnalysisSection = () => {
                                     <div className="flex justify-between items-center mb-2">
                                         <span className="font-medium">{skill.skill}</span>
                                         <span className="text-sm text-muted-foreground">
-                                            {skill.current}% / {skill.target}%
+                                            {skill.current}/{skill.target} ({skill.message})
                                         </span>
                                     </div>
                                     <div className="relative pt-1">
@@ -68,6 +68,9 @@ const SkillsAnalysisSection = () => {
                     <div className="flex flex-col gap-6">
                         <div className="bg-white rounded-lg border shadow-sm p-6">
                             <h3 className="text-lg font-semibold mb-4">Recommended Courses</h3>
+                            <p className="text-muted-foreground max-w-2xl mb-4">
+                            Here are some courses we recommend based on your current skillset.
+                            </p>
                             <div className="space-y-4">
                                 <div className="p-4 bg-softBlue rounded-lg">
                                     <div className="flex items-start">

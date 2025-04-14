@@ -43,12 +43,12 @@ const JobMatchingSection = () => {
                     <div>
                         <h2 className="text-3xl font-bold tracking-tight mb-2">AI-Powered Job Matching</h2>
                         <p className="text-muted-foreground max-w-2xl">
-                            Our intelligent system finds opportunities that match your unique background, skills, and goals.
+                            Here are some job opportunities based on your resume, profile, current location, and industry.
                         </p>
                     </div>
                     <Button asChild variant="outline" className="shrink-0">
                         <Link to="/jobs">
-                            View All Jobs <ArrowRight className="ml-2 h-4 w-4" />
+                            View More Jobs <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                     </Button>
                 </div>
